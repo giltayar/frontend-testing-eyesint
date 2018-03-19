@@ -78,6 +78,7 @@ describe('calculator app', function () {
       eyes = new Eyes()
 
       eyes.setApiKey(process.env.APPLITOOLS_API_KEY)
+      eyes.setBatch(null, process.env.APPLITOOLS_BATCH_ID)
 
       await eyes.open(driver, 'Calculator App', 'Tests', {width: 800, height: 600})
     })
